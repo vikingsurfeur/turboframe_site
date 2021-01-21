@@ -1,0 +1,122 @@
+/***** MAIN FONT *****/
+/***** FRAMEWORK BOOTSTRAP TUNING *****/
+/***** AUTHOR: L.CASTEL / D.BOUSCARLE *****/
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url("font/roboto/Roboto-Bold.ttf");
+  src: url("font/roboto/Roboto-Italic.ttf");
+  src: url("font/roboto/Roboto-Light.ttf");
+  src: url("font/roboto/Roboto-LightItalic.ttf");
+  src: url("font/roboto/Roboto-Medium.ttf");
+  src: url("font/roboto/Roboto-MediumItalic.ttf");
+  src: url("font/roboto/Roboto-Regular.ttf");
+  src: url("font/roboto/Roboto-Thin.ttf");
+  src: url("font/roboto/Roboto-ThinItalic.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url("font/raleway/Raleway-VariableFont_wght.ttf");
+  src: url("font/raleway/Raleway-Italic-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url("font/open_sans/OpenSans-Bold.ttf");
+  src: url("font/open_sans/OpenSans-Italic.ttf");
+  src: url("font/open_sans/OpenSans-Light.ttf");
+  src: url("font/open_sans/OpenSans-LightItalic.ttf");
+  src: url("font/open_sans/OpenSans-Regular.ttf");
+  src: url("font/open_sans/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("font/montserrat/Montserrat-Bold.ttf");
+  src: url("font/montserrat/Montserrat-Italic.ttf");
+  src: url("font/montserrat/Montserrat-Light.ttf");
+  src: url("font/montserrat/Montserrat-LightItalic.ttf");
+  src: url("font/montserrat/Montserrat-Medium.ttf");
+  src: url("font/montserrat/Montserrat-MediumItalic.ttf");
+  src: url("font/montserrat/Montserrat-Regular.ttf");
+  src: url("font/montserrat/Montserrat-SemiBold.ttf");
+  src: url("font/montserrat/Montserrat-Thin.ttf");
+  src: url("font/montserrat/Montserrat-ThinItalic.ttf");
+}
+
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  src: url("font/poppins/Poppins-Bold.ttf");
+  src: url("font/poppins/Poppins-Italic.ttf");
+  src: url("font/poppins/Poppins-Light.ttf");
+  src: url("font/poppins/Poppins-LightItalic.ttf");
+  src: url("font/poppins/Poppins-Medium.ttf");
+  src: url("font/poppins/Poppins-MediumItalic.ttf");
+  src: url("font/poppins/Poppins-Regular.ttf");
+  src: url("font/poppins/Poppins-SemiBold.ttf");
+  src: url("font/poppins/Poppins-Thin.ttf");
+  src: url("font/poppins/Poppins-ThinItalic.ttf");
+}
+
+@font-face {
+  font-family: 'Playfair Display', serif;
+  src: url("font/playfair_display/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+  src: url("font/playfair_display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: 'Libre Calson Display', serif;
+  src: url("font/libre_caslon/LibreCaslonDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto Condensed', sans-serif;
+  src: url("font/roboto_condensed/RobotoCondensed-Bold.ttf");
+  src: url("font/roboto_condensed/RobotoCondensed-Italic.ttf");
+  src: url("font/roboto_condensed/RobotoCondensed-Light.ttf");
+  src: url("font/roboto_condensed/RobotoCondensed-LightItalic.ttf");
+  src: url("font/roboto_condensed/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Major Mono Display', monospace;
+  src: url("font/major_mono/MajorMonoDisplay-Regular.ttf");
+}
+
+/* Variable des polices*/
+:root {
+  --clr-roboto: 'Roboto', sans-serif;
+  --clr-raleway: 'Raleway', sans-serif;
+  --clr-open-sans: 'Open Sans', sans-serif;
+  --clr-montserrat: 'Montserrat', sans-serif;
+  --clr-poppins: 'Poppins', sans-serif;
+  --clr-playfair-display: 'Playfair Display', serif;
+  --clr-libre-caslon: 'Libre Caslon Display', serif;
+  --clr-roboto-condensed: 'Roboto Condensed', sans-serif;
+  --clr-major-mono: 'Major Mono Display', monospace;
+}
+
+/*---------------------------COULEUR -------------------------------*/
+/*couleur principale*/
+:root {
+  --clr-black: #000000;
+  --clr-grey: #efefef;
+  --clr-white: #ffffff;
+  --clr-light-red: #bf0603;
+  --clr-dark-red: #8d0801;
+  --clr-sand: #dccab1;
+  --clr-ocre: #ce7c13;
+  --clr-light-green: #219f24;
+  --clr-dark-green: #075609;
+  --clr-blue: #154e7e;
+}
+
+/*---------------------------MISE EN PAGE -------------------------------*/
+/*font-style*/
+.fs-italic {
+  font-style: italic;
+}
+
+/*font-size*/
+.ft-1{font-size:.5rem!important}.ft-2{font-size:.75rem!important}.ft-3{font-size:1rem!important}.ft-4{font-size:1.25rem!important}.ft-5{font-size:1.5rem!important}.ft-6{font-size:1.75rem!important}.ft-7{font-size:2rem!important}.ft-8{font-size:3rem!important}.ft-9{font-size:4rem!important}.ft-10{font-size:5rem!important}@media (min-width:576px){.ft-sm-1{font-size:.5rem!important}.ft-sm-2{font-size:.75rem!important}.ft-sm-3{font-size:1rem!important}.ft-sm-4{font-size:1.25rem!important}.ft-sm-5{font-size:1.5rem!important}.ft-sm-6{font-size:1.75rem!important}.ft-sm-7{font-size:2rem!important}.ft-sm-8{font-size:3rem!important}.ft-sm-9{font-size:4rem!important}.ft-sm-10{font-size:5rem!important}}@media (min-width:768px){.ft-md-1{font-size:.5rem!important}.ft-md-2{font-size:.75rem!important}.ft-md-3{font-size:1rem!important}.ft-md-4{font-size:1.25rem!important}.ft-md-5{font-size:1.5rem!important}.ft-md-6{font-size:1.75rem!important}.ft-md-7{font-size:2rem!important}.ft-md-8{font-size:3rem!important}.ft-md-9{font-size:4rem!important}.ft-md-10{font-size:5rem!important}}@media (min-width:992px){.ft-lg-1{font-size:.5rem!important}.ft-lg-2{font-size:.75rem!important}.ft-lg-3{font-size:1rem!important}.ft-lg-4{font-size:1.25rem!important}.ft-lg-5{font-size:1.5rem!important}.ft-lg-6{font-size:1.75rem!important}.ft-lg-7{font-size:2rem!important}.ft-lg-8{font-size:3rem!important}.ft-lg-9{font-size:4rem!important}.ft-lg-10{font-size:5rem!important}}@media (min-width:1200px){.ft-xl-1{font-size:.5rem!important}.ft-xl-2{font-size:.75rem!important}.ft-xl-3{font-size:1rem!important}.ft-xl-4{font-size:1.25rem!important}.ft-xl-5{font-size:1.5rem!important}.ft-xl-6{font-size:1.75rem!important}.ft-xl-7{font-size:2rem!important}.ft-xl-8{font-size:3rem!important}.ft-xl-9{font-size:4rem!important}.ft-xl-10{font-size:5rem!important}}
+/*# sourceMappingURL=main_design.css.map */

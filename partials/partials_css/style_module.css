@@ -1,0 +1,924 @@
+
+/***** STYLE MODULE TURBO *****/
+/***** FRAMEWORK BOOTSTRAP TURBO *****/
+/***** AUTHOR: L.CASTEL / D.BOUSCARLE / I.OTMANI *****/
+
+
+*,*:before,*:after{padding: 0;margin: 0;-webkit-box-sizing: border-box;box-sizing: border-box;}
+/*PROBLEME OVERFLOW A REGLER SUR ACCORDION-2-WRAP-1-CAROUSEL */
+body{
+  overflow-x:hidden;
+}
+
+  :root {
+    --clr-major-mono: 'Major Mono Display', monospace;
+    --clr-sand: #dccab1;
+  }
+  /* MENU STYLE N1 
+  ==============================
+  ================================
+  ========================================*/
+  .menu-style-1 {position: fixed;width:100%;z-index: 1000;display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-align: center;-ms-flex-align: center;align-items: center;min-height: 8vh;background-color:rgba(58,54,50,1);color:white;}
+  .menu-style-1 .logo {color: rgb(170, 169, 169);letter-spacing: 2px;font-size: 22px;margin-left:100px;width: 20%;}
+  .menu-style-1 .logo img {width:15%;padding:10px;}
+  .menu-style-1 .menu-links {display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-pack: distribute;justify-content: space-around;width: 40%;    margin-top: 20px;}
+  .menu-style-1 .menu-links li {list-style: none;}
+  .menu-style-1 .menu-links a {padding-top:5px;color: white;text-decoration: none;letter-spacing: 3px;font-size: 13px;font-family: var(--clr-raleway);}
+  .menu-style-1 .bouton-burger {display: none;}
+  .menu-style-1 .bouton-burger div {width: 25px;height: 3px;background-color: white;margin: 5px !important;-webkit-transition: all .3s;transition: all .3s;}
+  @media (max-width: 1200px) {
+    .menu-style-1 .menu-links {width: 50%;}
+    .menu-style-1 .social-bar {display: none;}
+  }
+  @media (max-width: 768px) {
+    .menu-style-1 .logo img {width:45%;padding:10px;padding-top:10px;}
+    .menu-style-1 .logo {margin-left:0px}
+    .menu-style-1 h4{
+      font-size:0px!important;
+    }
+    body {overflow-x: hidden;}
+    .menu-style-1 .menu-links {position: absolute;z-index: 1;right: 0px;height: 92vh;top: 8vh;background-color:#3A3632;;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: center;-ms-flex-align: center;align-items: center;width: 50%;-webkit-transform: translateX(100%);transform: translateX(100%);-webkit-transition: -webkit-transform 0.5s ease-in;transition: -webkit-transform 0.5s ease-in;transition: transform 0.5s ease-in;transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;margin-top:0px;}
+    .menu-style-1 .menu-links li {opacity: 0;}
+    .menu-style-1 .social-bar {display: block;}
+    .menu-style-1 .bouton-burger {margin-right: 21px;margin-left: 20vh !important;margin-top: 0.5vh !important;display: block;cursor: pointer;}
+  }
+  
+  .menu-style-1 .menu-links.menu-actif {-webkit-transform: translateX(0%);transform: translateX(0%);-webkit-transition: -webkit-transform 0.5s ease-in;transition: -webkit-transform 0.5s ease-in;transition: transform 0.5s ease-in;transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;}
+  @-webkit-keyframes navLinkFade {from {opacity: 0;-webkit-transform: translateX(50px);transform: translateX(50px);}to {opacity: 1;-webkit-transform: translateX(0px);transform: translateX(0px);}}
+  @keyframes navLinkFade {from {opacity: 0;-webkit-transform: translateX(50px);transform: translateX(50px);}to {opacity: 1;-webkit-transform: translateX(0px);transform: translateX(0px);}}
+  .menu-style-1 .toggle .line1 {-webkit-transform: rotate(-45deg) translate(-5px, 6px);transform: rotate(-45deg) translate(-5px, 6px);}
+  .menu-style-1 .toggle .line2 {opacity: 0;}
+  .menu-style-1 .toggle .line3 {-webkit-transform: rotate(45deg) translate(-5px, -6px);transform: rotate(45deg) translate(-5px, -6px);}
+
+/* MENU STYLE 2 
+==========================================
+=============================================
+====================================================
+========================================================== */
+  :root{--clr-major-mono: 'Major Mono Display', monospace;}
+  #menu-style-2 .hero-anime{font-family:var(--clr-major-mono);font-size: 16px;line-height: 24px;font-weight: 400;}
+  /* #Navigation
+  ================================================== */
+  #menu-style-2  .hero-anime .start-header {opacity: 1;padding: 20px 0;box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);-webkit-transition : all 0.3s ease-out;transition : all 0.3s ease-out;}
+  #menu-style-2  .navigation-wrap{position: fixed;width: 100%;top: 0;left: 0;z-index: 1000;-webkit-transition : all 0.3s ease-out;transition : all 0.3s ease-out;}
+  #menu-style-2  .navbar{padding: 0px;}
+  #menu-style-2  .navbar-toggler {float: right;border: none;padding-right: 0;}
+  #menu-style-2  .navbar-toggler:active,
+  #menu-style-2  .navbar-toggler:focus {outline: none;}
+  #menu-style-2  .bg-light.navbar-brand{color:black!important;}
+  /*LINEBAR MENU TOGGLE
+  ======================================== */
+  #menu-style-2 .navbar-light .navbar-toggler-linebar {width:24px;height: 2px;background-color:black;position: absolute;border-bottom: 1px solid #000;transition: all 300ms linear;}
+  #menu-style-2 .navbar-light .navbar-toggler-linebar:after, 
+  #menu-style-2 .navbar-light .navbar-toggler-linebar:before{width: 14px;position: absolute;height: 2px;background-color: #000;top: -8px;left: 0;content: '';z-index: 2;transition: all 300ms linear;}
+  
+  #menu-style-2 .navbar-light .navbar-toggler{border-color: rgba(0, 0, 0, 0)!important;width: 90px; height: 40px;}
+  #menu-style-2 .navbar-light .navbar-toggler-linebar:after{top: 8px;}
+  #menu-style-2 .navbar-toggler[aria-expanded="true"] .navbar-toggler-linebar:after {transform: rotate(43deg);}
+  #menu-style-2 .navbar-toggler[aria-expanded="true"] .navbar-toggler-linebar:before {transform: translateY(8px) rotate(-43deg);}
+  #menu-style-2 .navbar-toggler[aria-expanded="true"] .navbar-toggler-linebar {border-color: transparent;background-color:transparent!important;}
+  /* NAV LINK 
+  ================================ */
+  #menu-style-2 .nav-link{color: #212121 ;transition: all 200ms linear;}
+  #menu-style-2 .nav-item{position: relative;transition: all 200ms linear;}
+  #menu-style-2 .nav-item:hover .nav-link{color: turquoise ;}
+  #menu-style-2  .nav-item.active .nav-link{color: red ;}
+  #menu-style-2  .nav-link {position: relative;padding: 5px 0 ;display: inline-block;}
+  #menu-style-2 .nav-item:after{position: absolute;bottom: -5px;left: 0;width: 100%;height: 2px;content: '';    background-color:  turquoise;opacity: 0;transition: all 200ms linear;}
+  #menu-style-2 .nav-item:hover:after{bottom: 0;opacity: 1;}
+  #menu-style-2 .nav-item.active:hover:after{opacity: 0;}
+  /* #Primary style
+  ================================================== */
+  #menu-style-2 .bg-light {background-color: #fff;transition: all 200ms linear;}
+  /* SWITCH TOGGLE DARK/LIGHT
+  =============================================== */
+  #menu-style-2 #switch,#circle {cursor: pointer;-webkit-transition: all 300ms linear;transition: all 300ms linear;} 
+  #menu-style-2 #switch {width: 60px;height: 20px;border-radius: 27px;background: rgb(212, 212, 212);position: relative;display: block;margin: 0 auto;text-align: center;opacity: 1;transform: translate(0);transition: all 300ms linear;margin-top:10px;}
+  #menu-style-2 #circle {position: absolute;width: 20px;height: 20px;border-radius: 50%;background: #000;}
+  #menu-style-2 .switched {border-color: none !important;background: grey !important;}
+  #menu-style-2 .switched #circle {left: 43px;background: #fff;} 
+  
+  /*dropdown menu
+  ===================================== */
+  #menu-style-2 .nav-item .dropdown-menu {transform: translate3d(0, 10px, 0);visibility: hidden;opacity: 0;max-height: 0;display: block;padding: 0;margin: 0;transition: all 200ms linear;}
+  #menu-style-2 .nav-item.show .dropdown-menu {opacity: 1;visibility: visible;max-height: 999px;transform: translate3d(0, 0px, 0);    background-color:rgba(0,0,0,0); border:none;}
+  #menu-style-2 .dropdown-menu {padding: 10px!important;margin: 0;font-size: 13px;letter-spacing: 1px;color: #212121;background-color: #fcfaff;border: none;border-radius: 3px;box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);transition: all 200ms linear;}
+  #menu-style-2 .dropdown-toggle::after {display: none;}
+  #menu-style-2 .dropdown-item {padding: 3px 15px;color: #212121;border-radius: 2px;transition: all 200ms linear;}
+  #menu-style-2 .dropdown-item:hover, .dropdown-item:focus {color: #fff;background-color: rgba(129,103,169,.6);}
+  
+  /* BODY DARK
+  ==================================*/
+  body.dark{color: #fff;background-color: #1f2029;}
+  body.dark .navbar-brand a{color:white;}
+  body.dark h1{color: #fff;}
+  body.dark h1 span{transition-delay: 0ms !important;}
+  body.dark p{color: #fff;transition-delay: 0ms !important;}
+  body.dark .bg-light {background-color: #14151a !important;}
+  body.dark .start-header {box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);}
+  body.dark .start-header.scroll-on {box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);}
+  body.dark .nav-link{color: #fff !important;}
+  body.dark .nav-item.active .nav-link{color:turquoise !important;}
+  body.dark .dropdown-menu {color: #fff;background-color: #1f2029;box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);}
+  body.dark .dropdown-item {color: #fff;}
+  body.dark .navbar-light .navbar-toggler-linebar {border-bottom: 1px solid #fff;}
+  body.dark .navbar-light .navbar-toggler-linebar:after, 
+  body.dark .navbar-light .navbar-toggler-linebar:before{background-color: #fff;}
+  body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-linebar {border-color: transparent;background-color:transparent;}
+  body.dark .navbar-brand{color:white!important;}
+  
+  /* #Media
+  ================================================== */
+  @media (max-width: 767px) { 
+    #menu-style-2 h1{font-size: 38px;}
+    #menu-style-2 .nav-item:after{display: none;}
+    #menu-style-2 .nav-item::before {position: absolute;display: block;top: 15px;left: 0;width: 11px;height: 1px;content: "";border: none;background-color: #000;}
+    #menu-style-2 .dropdown-toggle::after {position: absolute;display: block;top: 10px;left: -23px;width: 1px;height: 11px;content: "";border: none;background-color: #000;transition: all 200ms linear;}
+    #menu-style-2 .dropdown-toggle[aria-expanded="true"]::after{transform: rotate(90deg);opacity: 0;}
+    #menu-style-2 .dropdown-menu {padding: 0 !important;background-color: transparent;box-shadow: none;transition: all 200ms linear;}
+    #menu-style-2 .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {margin-top: 10px !important;margin-bottom: 20px !important;}
+      body.dark .nav-item::before {background-color: #fff;}
+      body.dark .dropdown-toggle::after {background-color: #fff;}
+    body.dark .dropdown-menu {background-color: transparent;box-shadow: none;}
+    body.dark .navbar-toggler-linebar,body.dark .navbar-toggler-linebar:before,body.dark .navbar-toggler-linebar:after{color:white;background-color:white!important;}	
+  }
+
+  /*MENU-STYLE-3
+=========================
+============================
+==================================*/
+
+/* Navbar section */
+#menu-style-3 .nav {width: 100%;height: 65px;position: fixed;line-height: 65px;text-align: center;font-family:  sans-serif;z-index:100;}
+#menu-style-3 .nav div.logo {float: left;width: auto;height: auto;padding-left: 3rem;}
+#menu-style-3 .nav div.logo a {text-decoration: none;color: #fff;font-size: 1.4rem;}
+#menu-style-3 .nav div.logo a:hover {color: #00E676;}
+#menu-style-3 .nav div.main_list {height: 65px;float: right;}
+#menu-style-3 .nav div.main_list ul {width: 100%;height: 65px;display: flex;list-style: none;margin: 0;padding: 0;}
+#menu-style-3 .nav div.main_list ul li {width: auto;height: 65px;padding: 0;padding-right: 3rem;}
+#menu-style-3 .nav div.main_list ul li a {text-decoration: none;color: #fff;line-height: 65px;font-size: 1.4rem;}
+#menu-style-3 .nav div.main_list ul li a:hover {color: #00E676;}
+
+/* Home section ****** A modifié selon les gouts */
+.image-de-fond {width: 100%;height: 100vh;background-image: url(img/img3.jpg);background-position: center top;background-size:cover;}
+#menu-style-3 .navTrigger {display: none;}
+#menu-style-3 .nav {padding-top: 20px;padding-bottom: 20px;-webkit-transition: all 0.4s ease;transition: all 0.4s ease;}
+
+/* Media query*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {.container {margin: 0;}}
+@media screen and (max-width:768px) {.navTrigger {display: block!important;}
+#menu-style-3 .nav div.main_list{display:none;}
+#menu-style-3 .nav div.main_list.show_list {display:block;height: 65px;;width:100%;position:absolute;top:65px;left:0;}
+#menu-style-3 .nav div.logo {margin-left: 15px;}
+#menu-style-3.nav div.main_list {width: 100%;height: 0;overflow: hidden;}
+#menu-style-3 .nav div.show_list {height: auto;display: none;}
+#menu-style-3 .nav div.main_list ul {flex-direction: column;width: 100%;height: 100vh;right: 0;left: 0;bottom: 0;background-color: #111;
+        /*same background color of navbar*/background-position: center top;}
+#menu-style-3 .nav div.main_list ul li {width: 100%;text-align: right;margin-top:30px;}
+#menu-style-3 .nav div.main_list ul li a {text-align: center;width: 100%;font-size: 1.4rem;padding: 20px;}
+#menu-style-3 .nav div.media_button {display: block;}
+}
+
+/* Animation */
+#menu-style-3 .navTrigger {cursor: pointer;width: 30px;height: 25px;margin: auto;position: absolute;right: 30px;top: 0;bottom: 0;}
+#menu-style-3 .navTrigger i {background-color: #fff;border-radius: 2px;content: '';display: block;width: 100%;height: 4px;}
+#menu-style-3 .navTrigger i:nth-child(1) {-webkit-animation: outT 0.8s backwards;animation: outT 0.8s backwards;-webkit-animation-direction: reverse;animation-direction: reverse;}
+#menu-style-3 .navTrigger i:nth-child(2) {margin: 5px 0;-webkit-animation: outM 0.8s backwards;animation: outM 0.8s backwards;-webkit-animation-direction: reverse;animation-direction: reverse;}
+#menu-style-3 .navTrigger i:nth-child(3) {-webkit-animation: outBtm 0.8s backwards;animation: outBtm 0.8s backwards;-webkit-animation-direction: reverse;animation-direction: reverse;}
+#menu-style-3 .navTrigger.active i:nth-child(1) {-webkit-animation: inT 0.8s forwards;animation: inT 0.8s forwards;}
+#menu-style-3 .navTrigger.active i:nth-child(2) {-webkit-animation: inM 0.8s forwards;animation: inM 0.8s forwards;}
+#menu-style-3 .navTrigger.active i:nth-child(3) {-webkit-animation: inBtm 0.8s forwards;animation: inBtm 0.8s forwards;}
+/*keyframe*/
+@-webkit-keyframes inM {50% {-webkit-transform: rotate(0deg);}100% {-webkit-transform: rotate(45deg);}}
+@keyframes inM {50% {transform: rotate(0deg);}100% {transform: rotate(45deg);}}
+@-webkit-keyframes outM {50% {-webkit-transform: rotate(0deg);}100% {-webkit-transform: rotate(45deg);}}
+@keyframes outM {50% { transform: rotate(0deg); }100% {transform: rotate(45deg);}}
+@-webkit-keyframes inT {0% { -webkit-transform: translateY(0px) rotate(0deg);}50% {-webkit-transform: translateY(9px) rotate(0deg);}100% {-webkit-transform: translateY(9px) rotate(135deg);}}
+@keyframes inT {0% {transform: translateY(0px) rotate(0deg);}50% {transform: translateY(9px) rotate(0deg);}100% {transform: translateY(9px) rotate(135deg);}}
+@-webkit-keyframes outT {0% {-webkit-transform: translateY(0px) rotate(0deg);}50% {-webkit-transform: translateY(9px) rotate(0deg);}100% {-webkit-transform: translateY(9px) rotate(135deg);}}
+@keyframes outT {0% {transform: translateY(0px) rotate(0deg);}50% {transform: translateY(9px) rotate(0deg);}100% {transform: translateY(9px) rotate(135deg);}}
+@-webkit-keyframes inBtm {0% {-webkit-transform: translateY(0px) rotate(0deg);}50% {-webkit-transform: translateY(-9px) rotate(0deg);}100% {-webkit-transform: translateY(-9px) rotate(135deg);}}
+@keyframes inBtm {0% {transform: translateY(0px) rotate(0deg);}50% {transform: translateY(-9px) rotate(0deg);}100% {transform: translateY(-9px) rotate(135deg);}}
+@-webkit-keyframes outBtm {0% {-webkit-transform: translateY(0px) rotate(0deg);}50% {-webkit-transform: translateY(-9px) rotate(0deg);}100% {-webkit-transform: translateY(-9px) rotate(135deg);}}
+@keyframes outBtm {0% {transform: translateY(0px) rotate(0deg);}50% {transform: translateY(-9px) rotate(0deg);}100% {transform: translateY(-9px) rotate(135deg);}}
+#menu-style-3 .affix {padding: 0;background-color: #111;}
+
+
+
+  /* ACCORDEON-4-WRAP
+  =======================================
+  ===========================================
+  ===============================================*/
+.accordeon-4-wrap .accordion-group li:nth-child(4) .accordion-overlay {background-color: #333333;opacity: 0.8;}
+.accordeon-4-wrap .accordion-group li:nth-child(3) .accordion-overlay {background-color: #9d9d9d;opacity: 0.8;}
+.accordeon-4-wrap .accordion-group li:nth-child(2) .accordion-overlay {background-color: #ca9964;opacity: 0.8;}
+.accordeon-4-wrap .accordion-group li:nth-child(1) .accordion-overlay {background-color: #a87339;opacity: 0.8;}
+
+/*fond accordeon avec hover (ajout de la classe .out)*/
+
+.accordeon-4-wrap .accordion-group li:nth-child(4).out .accordion-overlay {background-color: #333333;opacity: 0;}
+.accordeon-4-wrap .accordion-group li:nth-child(3).out .accordion-overlay {background-color: #9d9d9d;opacity: 0;}
+.accordeon-4-wrap .accordion-group li:nth-child(2).out .accordion-overlay {background-color: #ca9964;opacity: 0;}
+.accordeon-4-wrap .accordion-group li:nth-child(1).out .accordion-overlay {background-color: #a87339;opacity: 0;}
+
+/* reset les balises a */
+.accordeon-4-wrap a,.accordeon-4-wrap  a.active,.accordeon-4-wrap a:active,.accordeon-4-wrap a:focus,.accordeon-4-wrap a:hover {color: inherit;text-decoration: none!important;}
+
+/* Parametre de l'accordeon */
+.accordeon-4-wrap .accordion-group {overflow: hidden;margin: 0 auto;padding: 0;list-style: none;width: 100%;height: 700px;display: flex;align-items: center;-webkit-transition: all 300ms ease;-moz-transition: all 300ms ease;transition: all 300ms ease;}
+.accordeon-4-wrap .accordion-group li {cursor: pointer;position: relative;display: flex;overflow: hidden;margin: 0;padding: 1.6em;list-style: none;width: 16.66666667%;height: inherit;background-position: center center;background-size: cover;background-repeat: no-repeat;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;}
+.accordeon-4-wrap .accordion-group li h3 {position: relative;color: #ffffff;text-transform: uppercase;letter-spacing: 0.15rem;padding: 0;font-weight: 300;margin: 6.5rem 0 0;font-family: sans-serif;}
+
+/* Paramétre du fond sans hover */
+.accordeon-4-wrap .accordion-group li .accordion-overlay {position: absolute;height: 100%;width: 100%;left: 0;top: 0;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;}
+.accordeon-4-wrap .accordion-group li section {display: flex;align-items: center;width: 75%;height: 100%;}
+.accordeon-4-wrap .accordion-group li section article {display: table-cell;vertical-align: middle;padding: 2rem;position: relative;right: -200%;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;}
+.accordeon-4-wrap .accordion-group li section article p {background-color: rgba(255, 255, 255, 0.8);padding: 1.6rem;color: #333333;font-size: 1.6rem;letter-spacing: 0.15rem;}
+.accordion-group li section article p:before,
+.accordeon-4-wrap .accordion-group li section article p:after {content: "";display: block;height: 1px;}
+.accordeon-4-wrap .accordion-group li.out {width: 50%;}
+.accordeon-4-wrap .accordion-group li.out section article {right: 0;}
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+  .accordeon-4-wrap .accordion-group {height: 560px;}
+  .accordeon-4-wrap .accordion-group li { display: flex;align-items: center;justify-content: center;}
+  .accordeon-4-wrap .accordion-group li.out h3 {opacity: 1;color:white;}
+  .accordeon-4-wrap .accordion-group li h3 {opacity: 1;-webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);transform: rotate(90deg);width: 2.5rem;padding: 0;margin: 10rem 0;}
+}
+
+/*ACCORDION 5 WRAP
+==============================
+===================================
+========================================= */
+/*bLOCK ACCORDION*/
+#accordion-5-wrap .a5w-text-block {font-weight: bold;width: 100%;text-align: center;font-size: 1em;z-index: 2;color: rgba(255, 255, 255, 0.7);padding-top: 355px;padding-bottom: 327px;}
+#accordion-5-wrap .a5w-title-block{font-weight: 300;}
+#accordion-5-wrap .a5w-paragraphe-block { margin-top: 10px;padding: 20px;font-size: 0.7em;font-weight: 100;}
+#accordion-5-wrap .block-w {overflow: hidden;flex: 1 1 auto;float: left;background-color: #f2f2f2;width: 19%;height: 700px;transition: 0.3s ease-in-out;}
+/* OUVERTURE ONCLICK BLOCK*/
+#accordion-5-wrap .active {width: 48%;}
+#accordion-5-wrap .a5w-block {display: flex;flex-flow: row wrap;}
+ /*BLOCK IMAGE*/
+ #accordion-5-wrap .block1 {background-image: url(/img/img1.png);background-size: cover;-webkit-background-size: cover;}
+ #accordion-5-wrap .block2 {background-image: url(/img/img2.png);background-size: cover;-webkit-background-size: cover;}
+ #accordion-5-wrap .block3 {background-image: url(/img/img3.png);background-size: cover;-webkit-background-size: cover;}
+ #accordion-5-wrap .block4 {background-image: url(/img/img2.png);background-size: cover;-webkit-background-size: cover;}
+ #accordion-5-wrap .block5 {background-image: url(/img/img1.png);background-size: cover;-webkit-background-size: cover;}
+ /*HOVER*/
+ #accordion-5-wrap  .a5w-background-opacity {background-color: rgba(0, 0, 0, 0.2);top: 0;z-index: 1;width: 100%;transition: 0.3s ease-in-out;cursor: pointer;}
+ #accordion-5-wrap .block-w:hover .a5w-background-opacity {background: rgba(0, 0, 0, 0.6);}
+ #accordion-5-wrap .block-w:hover .a5w-text-block { color: #e6e6e6;}
+ #accordion-5-wrap .min {width: 10%;}
+ /*MEDIA*/
+ @media (max-width: 900px) {
+   #accordion-5-wrap .block-w {flex: 1 1 100%;}
+   #accordion-5-wrap .a5w-text-block {padding-top: 150px;padding-bottom: 140px;}
+   #accordion-5-wrap .block-w{height:300px;}
+}
+/*DISPLAY : NONE/BLOCK */
+#accordion-5-wrap .a5w-btn5 a{background: rgba(0, 0, 0, 0.2);border:1px solid white;padding: 5px;margin: 10px 30%;color: white;text-decoration: none;}
+ #accordion-5-wrap .block-w.min .a5w-btn5 a,#accordion-5-wrap .a5w-btn5 a,#accordion-5-wrap .block-w.min .a5w-paragraphe-block,#accordion-5-wrap .a5w-paragraphe-block{display:none;}
+ #accordion-5-wrap .block-w.active .a5w-btn5 a,#accordion-5-wrap .block-w.active  .a5w-paragraphe-block { display:block;}
+#accordion-5-wrap .a5w-btn5 a:hover{background: rgba(0, 0, 0, 1);}
+
+
+/* ACCORDION-2-WRAP-1-CAROUSEL
+=================================
+=====================================
+======================================*/
+#accordion-2-wrap-1-carrousel .no-padding{padding:0!important;}
+
+#accordion-2-wrap-1-carrousel{height:100vh;overflow-x:hidden;overflow-y:hidden;}
+#accordion-2-wrap-1-carrousel .accordion-1,.accordion-2,.accordion-3{height:100vh;}
+#accordion-2-wrap-1-carrousel .accordion-1{background-image: url(/img/img2.png);background-size:cover;background-repeat:no-repeat;}
+#accordion-2-wrap-1-carrousel .accordion-2{background-image: url(/img/img1.png);background-size:cover;background-repeat:no-repeat;}
+#accordion-2-wrap-1-carrousel .accordion-block1,.accordion-block2{color:white;padding:40px;padding-top:60%;}
+#accordion-2-wrap-1-carrousel .accordion-block3 {
+  color: white;
+  padding: 40px;
+  padding-top: 10%;
+}
+/* OPEN BLOCK 2*/
+#accordion-2-wrap-1-carrousel .block2-open,.block1-open{visibility: hidden;overflow:hidden;height:0;}
+#accordion-2-wrap-1-carrousel .block2-open .block2-link h5,#accordion-2-wrap-1-carrousel .block1-open .block1-link h5{font-size:14px;margin-top:30px;}
+#accordion-2-wrap-1-carrousel .block2-open .block2-link p,#accordion-2-wrap-1-carrousel .block1-open .block1-link p{font-size:12px;color:rgb(180, 179, 179);}
+#accordion-2-wrap-1-carrousel .accordion-block2.open,#accordion-2-wrap-1-carrousel .accordion-block1.open{padding-top:15%;background-color:rgba(0,0,0,0.4);transition:all .4s ease-in-out;}
+#accordion-2-wrap-1-carrousel .accordion-block2.open .accordion-strong-text-close,#accordion-2-wrap-1-carrousel .accordion-block1.open .accordion-strong-text-close{visibility: hidden;overflow:hidden;height:0;}
+#accordion-2-wrap-1-carrousel .accordion-block2.open .block2-open,#accordion-2-wrap-1-carrousel .accordion-block1.open .block1-open{visibility: visible;overflow: visible;height:78vh;}
+#accordion-2-wrap-1-carrousel .accordion-block2.open .block2-open a,#accordion-2-wrap-1-carrousel .accordion-block1.open .block1-open a{text-decoration: none;color:black;background-color:rgb(235, 233, 233);padding:5px; border-radius:3px;font-size:14px;}
+#accordion-2-wrap-1-carrousel .accordion-block1.open .block1-open .connexion{text-decoration: none;color:white;background-color:transparent;padding:5px;border-radius:3px;font-size:14px;border:1px solid white;}
+#accordion-2-wrap-1-carrousel .accordion-block1.open .block1-open .connexion:hover{background-color:rgb(235, 233, 233);color:black;transition:all .3s ease-in-out;}
+#accordion-2-wrap-1-carrousel .accordion-block2.open .block2-open .line-bar,#accordion-2-wrap-1-carrousel .accordion-block1.open .block1-open .line-bar{width: 100%;height:1px;background-color:white;margin-top:30px;}
+#accordion-2-wrap-1-carrousel .page-link{background:none!important;color:white!important;border:none!important;font-weight:bold;}
+#accordion-2-wrap-1-carrousel .page-link:hover{text-decoration: underline!important;}
+/* CARROUSEL */
+
+#accordion-2-wrap-1-carrousel .carousel{height:100vh;background-image:url(img/img2.png);background-size:cover;background-repeat:no-repeat;}
+#accordion-2-wrap-1-carrousel .carousel-item{height:100vh!important;width:auto!important;}
+#accordion-2-wrap-1-carrousel .carousel-caption{position:relative; left:1%!important;right:43%!important;top:35%;padding:40px;}
+#accordion-2-wrap-1-carrousel .carousel-caption h1,#accordion-2-wrap-1-carrousel .carousel-caption p{width:360px;}
+#accordion-2-wrap-1-carrousel .carousel-caption .inscription{text-decoration: none;color:black;background-color:rgb(235, 233, 233);padding:5px;border-radius:3px;font-size:14px;}
+
+#accordion-2-wrap-1-carrousel svg{width:400px;}
+#accordion-2-wrap-1-carrousel .carousel-indicators li{height:7px;border:2px solid white;background:none;}
+#accordion-2-wrap-1-carrousel .carousel-indicators .active{background:white;}
+
+
+
+
+
+@media (max-width: 990px) {
+    #accordion-2-wrap-1-carrousel{padding-top: 69px;}
+    #accordion-2-wrap-1-carrousel .accordion-1,#accordion-2-wrap-1-carrousel .accordion-2,#accordion-2-wrap-1-carrousel .carrousel-1{height:auto;transition:all .3s ease-in-out;}
+    #accordion-2-wrap-1-carrousel .accordion-1:hover,#accordion-2-wrap-1-carrousel .accordion-2:hover,#accordion-2-wrap-1-carrousel .carrousel-1:hover{height:100vh;}
+    #accordion-2-wrap-1-carrousel .accordion-block1,#accordion-2-wrap-1-carrousel .accordion-block2{color:white;padding:40px;padding-top:10%;}
+    #accordion-2-wrap-1-carrousel .accordion-block2 .accordion-strong-text-close,#accordion-2-wrap-1-carrousel .accordion-block1 .accordion-strong-text-close{visibility: hidden;overflow:hidden;height:0;}
+    #accordion-2-wrap-1-carrousel .carousel{height:40vh;width:100%;background-image:url(img/img3.jpg);overflow: hidden;}
+    #accordion-2-wrap-1-carrousel .carousel-item{height:40vh!important;width:auto!important;}
+    #accordion-2-wrap-1-carrousel .carousel-caption{position:absolute;left:0px!important;right:0!important;top:0!important;bottom:0!important;padding:40px;font-size:12px;}
+    #accordion-2-wrap-1-carrousel .carousel-caption h1{font-size:15px;}
+    #accordion-2-wrap-1-carrousel .carousel-caption p{width: 300px;}
+    #accordion-2-wrap-1-carrousel img{height: 100%;width: 100%;}
+    #accordion-2-wrap-1-carrousel{overflow-y: visible;}
+    #accordion-2-wrap-1-carrousel .carousel-1{max-height:20vh!important;}
+    #accordion-2-wrap-1-carrousel .block2-open, #accordion-2-wrap-1-carrousel .block1-open{visibility: visible;overflow:hidden;height:100px;}
+    #accordion-2-wrap-1-carrousel .accordion-block2 .block2-open a,#accordion-2-wrap-1-carrousel .accordion-block1 .block1-open a{text-decoration: none;color:black;background-color:rgb(34, 33, 33); padding:5px 10px; border-radius:3px;font-size:14px; color:white;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CARDS-STYLE-1
+==================
+=======================
+=========================*/
+/* Cards réglages général */
+#cards-style-1 h3 {font-size: 1.25rem;transition: 100ms ease-out;}
+#cards-style-1 h3, p {margin: 0;}
+#cards-style-1 p {font-size: 0.85rem;}
+#cards-style-1 ul {padding: 0;margin: 0;}
+#cards-style-1 ul li {display: inline;list-style: none;}
+#cards-style-1 a {text-decoration: none;}
+/* Cards Elements */
+#cards-style-1 .img-profile {width: 12.5em;height: 20em;margin-bottom: 0.25em;background-image: url(/img/img1.png);background-size: cover;background-position: center;border-radius: 0.5em 0.5rem 0rem 0rem;transition: 250ms all;}
+#cards-style-1 .game {position: relative;width: 12.5rem;}
+#cards-style-1 .rank {font-weight: bold;position: absolute;top: 0;right: 2em;color: white;background: linear-gradient(#9198e5, #e66465);padding: 0.5em 0.5em 1em;clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0 100%, 0 0);}
+#cards-style-1 .front {transition: 250ms ease-in-out;}
+#cards-style-1 .details {background: linear-gradient(#e66465, #9198e5);padding: 0.5em 0;border-radius: 0em 0rem 0.5rem 0.5rem;}
+#cards-style-1 .name {margin: 0 0 0.75em 0;text-align: center;text-transform: uppercase;}
+#cards-style-1 .stats-down {display: flex;justify-content: space-between;align-items: center;transition: 100ms ease-out;}
+#cards-style-1 .viewers {font-weight: bolder;margin-left: 0.75em;}
+#cards-style-1 .streamers {display: flex;}
+#cards-style-1 .streamers i {width: 1.5em;color: white;}
+#cards-style-1 .back {visibility: hidden;display: flex;justify-content: center;}
+#cards-style-1 .back .btn {font-family: 'raleway', sans-serif;font-weight: bolder;position: relative;background: linear-gradient(#9198e5, #e66465);border: none;color: white;padding: 0.75em 1.5em;border-radius: 0.5em;opacity: 0;transition: 100ms ease-out;}
+/* Cards Hover */
+#cards-style-1 .game:hover .back {visibility: visible;}
+#cards-style-1 .game:hover .btn {opacity: 1;}
+#cards-style-1 .game:hover .front {transform: scale(0.9);}
+#cards-style-1 .game:hover .img-profile {background-image: url(/img/img2.png);box-shadow: 0em 2em 3em rgba(0, 0, 0, 0.75);}
+#cards-style-1 .game:hover .details {box-shadow: 0em 2em 3em rgba(0, 0, 0, 0.75);}
+#cards-style-1 .game:hover h3 {transform: translateY(-2em);}
+#cards-style-1 .game:hover .stats-down {transform: translateY(-1.25em);}
+
+/*CARDS-STYLE-2
+================
+===================
+=======================*/
+/*cards réglages */
+#cards-style-2 ul {list-style: none;padding: 0;}
+#cards-style-2 ul a {color: inherit;transition: 250ms ease-in-out;padding: 0.2em 0.75em;border: 1px white solid;border-radius: 0.25em;}
+#cards-style-2 ul a:hover {text-decoration: none;color: var(--clr-black);background-color: var(--clr-white);}
+/*cards éléments */
+#cards-style-2 .card {width: 12.5em;position: relative;border-radius: 0.4em 0.4em 0.4em 0.4em!important;    border: 1px solid rgba(0, 0, 0, 0.125)!important;}
+#cards-style-2 .card .ban {height: 2em;background-color: var(--clr-sand);border-radius: 0.2em 0.2em 0 0;}
+#cards-style-2 .carousel {height: 20em;}
+#cards-style-2 .carousel img {height: 20em;}
+#cards-style-2 .carousel .carousel-caption {position: absolute;bottom: 0.5em;}
+#cards-style-2 .carousel .carousel-caption h5 {padding-bottom: 0.2em;}
+#cards-style-2 .carousel .carousel-indicators li {width: 0.5em !important;height: 0.5em !important;border-radius: 50%;}
+#cards-style-2 .separator {width: 10em;}
+#cards-style-2 .btn {padding: 0.5em 2em;background-color: var(--clr-sand);color: var(--clr-white);transition: 250ms ease-in-out;}
+#cards-style-2 .btn:hover {background-color: var(--clr-white);color: var(--clr-black);box-shadow: 0 0 0.04em 0.04em var(--clr-grey);}
+#cards-style-2 .tc-align {background-color: rgb(224, 224, 224);text-align: center !important;border: 1px solid lightgrey;}
+
+
+/* CARDS-STYLE-3
+===================
+=====================
+======================== */
+/* cards réglages */
+#cards-style-3 ul {padding: 0;margin: 0;}
+#cards-style-3 ul li {display: inline;}
+#cards-style-3 ul li a {color: var(--clr-white);transition: 250ms ease-in-out;}
+#cards-style-3 ul li a:hover {color: var(--clr-light-red);text-decoration: none;}
+/*cards éléments */
+#cards-style-3 .scene {width: 15em;height: 20em;perspective: 80em;}
+.card {position: relative; width: 100%;height: 100%; transition: transform 1s; transform-style: preserve-3d;cursor: pointer;border: none !important;}
+#cards-style-3 .card.flip {transform: rotateY(180deg);}
+#cards-style-3 .card-face {width: 100%;height: 100%;color: var(--clr-white);backface-visibility: hidden;border-radius: 0.5em;position: absolute;}
+#cards-style-3 .front {background-image: url(/img/img3.png);background-size: cover;background-repeat: no-repeat;background-position: center;}
+#cards-style-3 .back {background-image: url(/img/img4.jpg);background-size: cover;background-repeat: no-repeat;background-position: center;transform: rotateY(180deg);}
+#cards-style-3 .contact {background-color: rgba(0, 0, 0, 0.5);text-align: center;}
+#cards-style-3 .separator {width: 10em;background-color: var(--clr-white);}
+#cards-style-3 .rank {position: relative;margin: 2.25em 0em;width: 5em;height: 0.25em;background-color: var(--clr-white);}
+
+
+/* FOOTER N_1
+===============================================
+=====================================================
+========================================================*/
+#footer_1 {background-color: var(--clr-grey);font-family: var(--clr-raleway);}
+#footer_1 a {color: var(--clr-black);transition: 250ms all;}
+#footer_1 a:hover {text-decoration: none;color: var(--clr-light-red);  }
+#footer_1 ul {list-style: none;padding: 0;}
+#footer_1 iframe {max-width: 100%;}
+#footer_1 .separator {width: 10em;height: 1px;margin: 1em 0;background-color: var(--clr-black);}
+@media screen and (max-width: 992px) {#footer_1 .responsive { display: flex; flex-direction: column; align-items: center;}}
+
+/* FOOTER N_2
+==================================================
+=====================================================
+=======================================================*/
+#footer_2 {background-color:#3A3632;font-family: var(--clr-raleway);}
+#footer_2 h4 {font-size: 1.15rem;font-weight: 500;}
+#footer_2 ul {list-style: none;padding: 0;}
+#footer_2 a {color: rgb(161, 161, 161);transition: 250ms all;}
+#footer_2 a:hover {text-decoration: none;color: var(--clr-light-red);}
+#footer_2 iframe {max-width: 100%;}
+#footer_2 .separator {width: 10em;height: 1px;margin: 1em 0;background-color: var(--clr-black);}
+#footer_2 label{color: rgb(161, 161, 161);}
+#footer_2 img{width:20%!important;}
+@media screen and (max-width: 992px) {#footer_2 .responsive {display: flex;flex-direction: column;align-items: center;}}
+#footer_2 h4, #footer_2 p{
+  color:white;
+}
+
+
+
+/*BOUTON TURBO 
+==============================================
+=====================================================
+=============================================================*/
+/*VERSION 1.1 
+========================
+============================
+=================================*/
+/*BOUTON-CLASSIQUE*/
+/* ASPECT GENERAL */
+
+.btn-tc{padding:5px 20px;border:none;}
+.btn-tc-m{padding:7px 40px;border:none;}
+.btn-tc-l{padding:10px 60px;border:none;}
+
+/* COULEUR */
+/*BOUTON SMALL*/
+.btn-tc.btn-black{background-color:#000000;color:white;transition:all .3s ease-in-out;}
+.btn-tc.btn-grey{background-color:#efefef;color:black;transition:all .2s ease-in-out;}
+.btn-tc.btn-white{background-color:white;color:black;transition:all .2s ease-in-out;}
+.btn-tc.btn-lightred{background-color:#bf0603;color:white;transition:all .2s ease-in-out;}
+.btn-tc.btn-darkred{background-color: #8d0801;color:white;transition:all .2s ease-in-out;}
+.btn-tc.btn-sand{background-color: #dccab1;color:black;transition:all .2s ease-in-out;}
+.btn-tc.btn-ocre{background-color:#ce7c13;color:white;transition:all .2s ease-in-out;}
+.btn-tc.btn-lightgreen{background-color:#219f24;color:white;transition:all .2s ease-in-out;}
+.btn-tc.btn-darkgreen{background-color:#075609;color:white;transition:all .2s ease-in-out;}
+.btn-tc.btn-blue{background-color:#154e7e;color:white;transition:all .2s ease-in-out;}
+
+
+/*BOUTON MEDIUM*/
+.btn-tc-m.btn-black{background-color:#000000;color:white;transition:all .3s ease-in-out;}
+.btn-tc-m.btn-grey{background-color:#efefef;color:black;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-white{background-color:white;color:black;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-lightred{background-color:#bf0603;color:white;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-darkred{background-color: #8d0801;color:white;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-sand{background-color: #dccab1;color:black;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-ocre{background-color:#ce7c13;color:white;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-lightgreen{background-color:#219f24;color:white;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-darkgreen{background-color:#075609;color:white;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-blue{background-color:#154e7e;color:white;transition:all .2s ease-in-out;}
+
+
+
+/*BOUTON LARGE*/
+.btn-tc-l.btn-black{background-color:#000000;color:white;transition:all .3s ease-in-out;}
+.btn-tc-l.btn-grey{background-color:#efefef;color:black;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-white{background-color:white;color:black;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-lightred{background-color:#bf0603;color:white;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-darkred{background-color: #8d0801;color:white;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-sand{background-color: #dccab1;color:black;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-ocre{background-color:#ce7c13;color:white;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-lightgreen{background-color:#219f24;color:white;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-darkgreen{background-color:#075609;color:white;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-blue{background-color:#154e7e;color:white;transition:all .2s ease-in-out;}
+
+/* BORDER */
+.btn-tc.border{border:1px solid black!important;}
+.btn-tc-m.border{border:1px solid black!important;}
+.btn-tc-l.border{border:1px solid black!important;}
+.btn-tc.border-r{border-radius:15px;}
+.btn-tc-m.border-r{border-radius:15px;}
+.btn-tc-l.border-r{border-radius:15px;}
+
+/* HOVER S-M-L */
+.btn-tc.btn-black:hover{background-color:#222121 ;transition:all .2s ease-in-out;}
+.btn-tc.btn-grey:hover{background-color:#cecccc;transition:all .2s ease-in-out;}
+.btn-tc.btn-white:hover{background-color:rgb(223, 223, 223);transition:all .2s ease-in-out;}
+.btn-tc.btn-lightred:hover{background-color:#8b0101;transition:all .2s ease-in-out;}
+.btn-tc.btn-darkred:hover{background-color:#530101;transition:all .2s ease-in-out;}
+.btn-tc.btn-sand:hover{background-color:#eedbc0;transition:all .2s ease-in-out;}
+.btn-tc.btn-ocre:hover{background-color:#814e0b;transition:all .2s ease-in-out;}
+.btn-tc.btn-lightgreen:hover{background-color:#186e1a;transition:all .2s ease-in-out;}
+.btn-tc.btn-darkgreen:hover{background-color:#186e1a;transition:all .2s ease-in-out;}
+.btn-tc.btn-blue:hover{background-color:#0e3555;transition:all .2s ease-in-out;}
+
+.btn-tc-m.btn-black:hover{background-color:#222121 ;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-grey:hover{background-color:#cecccc;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-white:hover{background-color:rgb(223, 223, 223);transition:all .2s ease-in-out;}
+.btn-tc-m.btn-lightred:hover{background-color:#8b0101;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-darkred:hover{background-color:#530101;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-sand:hover{background-color:#eedbc0;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-ocre:hover{background-color:#814e0b;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-lightgreen:hover{background-color:#186e1a;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-darkgreen:hover{background-color:#186e1a;transition:all .2s ease-in-out;}
+.btn-tc-m.btn-blue:hover{background-color:#0e3555;transition:all .2s ease-in-out;}
+
+.btn-tc-l.btn-black:hover{background-color:#222121 ;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-grey:hover{background-color:#cecccc;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-white:hover{background-color:rgb(223, 223, 223);transition:all .2s ease-in-out;}
+.btn-tc-l.btn-lightred:hover{background-color:#8b0101;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-darkred:hover{background-color:#530101;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-sand:hover{background-color:#eedbc0;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-ocre:hover{background-color:#814e0b;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-lightgreen:hover{background-color:#186e1a;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-darkgreen:hover{background-color:#186e1a;transition:all .2s ease-in-out;}
+.btn-tc-l.btn-blue:hover{background-color:#0e3555;transition:all .2s ease-in-out;}
+
+
+/*BOUTON AVEC HOVER ANIMATE
+==============================
+====================================*/
+.btn-round{background-color:transparent;border:none;letter-spacing: .25em;}
+
+.btn-round:before{content: "";position:absolute;display: block;margin-left:-22px;margin-top:-6px;height:40px;width:40px;border-radius:28px;opacity:.5;transition:all .3s ease; z-index:0;}
+
+.btn-round.black:hover:before,.btn-round.grey:hover:before,.btn-round.white:hover:before,.btn-round.lightred:hover:before,.btn-round.darkred:hover:before,.btn-round.sand:hover:before,.btn-round.ocre:hover:before,.btn-round.lightgreen:hover:before,.btn-round.darkgreen:hover:before,.btn-round.blue:hover:before,
+.btn-round:hover:before{width:180px;opacity:1;transition:all .3s ease;}
+
+.btn-round.black:hover,.btn-round.lightred:hover,.btn-round.darkred:hover,.btn-round.ocre:hover,.btn-round.lightgreen:hover,.btn-round.darkgreen:hover,.btn-round.blue:hover{color:white;}
+.btn-round span{
+  z-index:1;
+  position:absolute;
+}
+
+.btn-round:before{background-color:none;opacity:.5;}
+.btn-round.black:before{background-color:rgba(0,0,0);color:white;opacity:.5;}
+.btn-round.grey:before{background-color:#efefef;color:black;opacity:.5;}
+.btn-round.white:before{background-color:white;color:black;opacity:.5;}
+.btn-round.lightred:before{background-color:#bf0603;color:white;opacity:.5;}
+.btn-round.darkred:before{background-color: #8d0801;color:white;opacity:.5;}
+.btn-round.sand:before{background-color: #dccab1;color:black;opacity:.5;}
+.btn-round.ocre:before{background-color:#ce7c13;color:white;opacity:.5;}
+.btn-round.lightgreen:before{background-color:#219f24;color:white;opacity:.5;}
+.btn-round.darkgreen:before{background-color:#075609;color:white;opacity:.5;}
+.btn-round.blue:before{background-color:#154e7e;color:white;opacity:.5;}
+
+.btn-round svg{position: relative;top: 0; margin-left:120px;fill: none;stroke-linecap: round;stroke-linejoin: round;stroke: black;stroke-width: 2;transform: translateX(-5px);transition: all .3s ease;}
+ .btn-round.black:hover svg,.btn-round.lightred:hover svg,.btn-round.darkred:hover svg,.btn-round.ocre:hover svg,.btn-round.lightgreen:hover svg,.btn-round.darkgreen:hover svg,.btn-round.blue:hover svg{stroke:white;transform: translateX(0px);}
+
+
+/* BTN-TURBO
+==================
+=======================*/
+
+.btn-turbo{display: inline-block;position: relative;padding: 1.4rem 4.2rem;padding-right: 3.1rem;font-size: 1rem;color: black;letter-spacing: 1.1rem;text-transform: uppercase;transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);cursor: pointer;user-select: none;}
+.btn-turbo:before, .btn-turbo:after {content: '';position: absolute;transition: inherit;z-index: -1;}
+.btn-turbo:hover {color: white;transition-delay: .5s;z-index:2;}
+.btn-turbo:hover:before {transition-delay: 0s;}
+.btn-turbo:hover:after {background: red;transition-delay: .35s;}
+
+/* LEFT EFFECT */
+.btn-turbo.left-side:before, .btn-turbo.left-side:after{top: 0;width: 0;height: 100%;}
+.btn-turbo.left-side:before {right: 0;border: 1px solid red;border-left: 0;border-right: 0;	}
+.btn-turbo.left-side:after {left: 0;}
+.btn-turbo.left-side:hover:before,.btn-turbo.left-side:hover:after {width: 100%;}
+
+/* BOTTOM EFFECT*/
+.btn-turbo.bottom-side:before, .btn-turbo.bottom-side:after {left: 0;height: 0;width: 100%;}
+.btn-turbo.bottom-side:before {top: 0;border: 1px solid red;border-top: 0;border-bottom: 0;}
+.btn-turbo.bottom-side:after {bottom: 0;height: 0;}
+.btn-turbo.bottom-side:hover:before,.btn-turbo.bottom-side:hover:after {height: 100%;}
+
+/* RIGHT EFFECT */
+.btn-turbo.right-side:before, .btn-turbo.right-side:after {top: 0;width: 0;height: 100%;}
+.btn-turbo.right-side:before {left: 0;border: 1px solid red;border-left: 0;border-right: 0;	}
+.btn-turbo.right-side:after {right: 0;}
+.btn-turbo.right-side:hover:before,.btn-turbo.right-side:hover:after {width: 100%;}
+
+/*TOP EFFECT*/
+.btn-turbo.top-side:before,.btn-turbo.top-side:after {left: 0;height: 0;width: 100%;}
+.btn-turbo.top-side:before {bottom: 0;border: 1px solid red;border-top: 0;border-bottom: 0;}
+.btn-turbo.top-side:after {top: 0;height: 0;}
+.btn-turbo.top-side:hover:before,.btn-turbo.top-side:hover:after {height: 100%;}
+
+
+
+/* SECTION HEADER 1
+========================
+============================
+================================*/
+
+.section-header-1{background-image:url(img/img1-section-header-1.png);background-size:cover;background-repeat:no-repeat;background-position: center;height:100vh;}
+.section-header-1 #background-opacity{background-color:rgba(0,0,0,.3);height:100vh;}
+.section-header-1 .contain-section-header-1{padding:0px 20px;}
+.section-header-1 .para-section-header-1{width:100%;font-size:20px;}
+.section-header-1 .title-section-header-1{color:white;font-size:60px;text-shadow: 1px 1px 1px black;padding-top:16rem;}
+.section-header-1 .para-section-header-1{color:rgb(235, 235, 235);}
+
+.section-header-1 .btn-round svg{stroke:white;}
+.section-header-1 .btn-round{color:white;}
+
+.section-header-1 .btn-round:hover span{color:black;}
+.section-header-1 .btn-round:hover svg{stroke:black;}
+@media(min-width:576px){.section-header-1 .para-section-header-1{width:60%;}}
+
+/* SECTION HEADER 2
+========================
+============================
+================================*/
+
+.section-header-2 .background-opacity{background-color:rgba(0,0,0,.4);height:100vh;}
+.section-header-2{background-image: url(img/img1-section-header-1.jpg);background-size: cover;background-repeat: no-repeat;height:100vh;}
+.section-header-2 p{color:white;padding:0 40px;}
+.section-header-2 .border-formulaire{padding:40px;border-radius:30px;background-color:rgba(0,0,0,.6);}
+.section-header-2 .border-formulaire{margin:50px 90px;}
+.section-header-2 .block-text{margin-top:150px;}
+.section-header-2 .title-form,.title-text{color:white;}
+.section-header-2 .title-text{font-size:60px;}
+.section-header-2 .form-email,.form-password{background:transparent!important;border:1px solid white!important;border-radius:20px!important;max-width:600px;margin:0 auto;color:white!important;}
+.section-header-2 .form-email::placeholder,.form-password::placeholder{color:white!important;}
+.section-header-2 .btn-tc{padding: 4px 60px;background-color:transparent!important;color:white!important;margin:10px 0px;}
+.section-header-2 .btn-tc.border{border:2px solid white!important;}
+.section-header-2 .btn-black{background:transparent!important;}
+.section-header-2 .btn-black:hover{background-color:black!important;transition:all .3s ease-in-out;}
+@media(min-width:576px){.section-header-2 .border-formulaire{margin: 280px 90px;}.section-header-2 .block-text{margin:270px 0px;}.section-header-2 p{color:white;padding:20px 0px;font-size:26px;}}
+
+
+/* SECTION CONTENT 1
+=======================
+=========================
+=================================*/
+.grille-turbo-1 img{width:100%;margin:10px;}
+.grille-turbo-1 .turbo-row{max-height:800px!important;overflow:hidden;}
+
+
+/* SECTION CONTENT 2 
+======================
+=========================
+===============================*/
+
+.section-content-2{background-color: rgb(20, 20, 20);color:white;}
+.section-content-2 .panel-button{margin-top:17%;}
+.section-content-2 .panel-button span{font-size:35px; color:white;}
+.section-content-2 .list-group{ display:flex; flex-direction: row;}
+.section-content-2 .list-group-item{background-color:transparent!important;}
+.section-content-2 .list-group-item.active{border-radius:200px; border:1px solid white; transition:all .3s ease-in-out;}
+.section-content-2 .list-group-item.active span{color:turquoise;}
+.section-content-2 .panel-text{margin-top:10%;}
+
+
+@media(min-width:576px){
+    .section-content-2{height:100vh;background-color: rgb(20, 20, 20);font-size:100%;color:white;}
+    .section-content-2 .panel-button{margin-top:17%;}
+    .section-content-2 .panel-button span{font-size:35px;color:white;}
+    .section-content-2 .list-group-item{background-color:transparent!important;}
+    .section-content-2 .list-group-item.active{border-radius:200px;border:1px solid white;transition:all .3s ease-in-out;}
+    .section-content-2 .list-group-item.active span{color:turquoise;}
+    .section-content-2 .panel-text{margin-top:10%;}
+    .section-content-2 .list-group{display:flex;flex-direction: column;}
+}
+/* SECTION CONTENT 4 
+======================
+=========================
+===============================*/
+.section-content-4 img{width:100%;}
+
+
+
+/* SECTION CONTENT 5 
+======================
+=========================
+===============================*/
+
+.section-content-5 .list-group{display:flex;flex-direction: row;margin: 0 auto;}
+.section-content-5 .list-group-item{border:none;border-bottom: 1px solid grey;}
+.section-content-5 .list-group-item.active{background-color:transparent;color:black;border-bottom:2px solid black;}
+.section-content-5 .list-group-item:hover{background-color:transparent;}
+.section-content-5 .tab-pane img{object-fit: cover;height: 200px;}
+
+.section-content-5 .btn-turbo{padding: 0.4rem 1.2rem;padding-right: 1.2rem;font-size:.4rem;letter-spacing:1px;}
+.section-content-5 .btn-turbo.left-side:before {right: 0;border: 1px solid black;border-left:0;border-right:0;}
+.section-content-5 .btn-turbo:hover:after {background: black;transition-delay: .35s;}
+
+@media(min-width:576px){
+    .section-content-5 .list-group{width:50%;}  
+    .section-content-5 .card{margin:0px 10px;}
+}
+
+
+
+/* EFFECT
+===========================
+================================
+======================================= */
+
+/* ZOOM IN AND OUT */
+.effect-zoom-in {transition: .2s;}
+.effect-zoom-in:hover {transform: scale(1.08);}
+.effect-zoom-out {transition: .2s;}
+.effect-zoom-out:hover {transform: scale(0.95);}
+
+/* BLUR */
+.effect-blur-1 {-webkit-filter: blur(2px);-moz-filter: blur(2px);-o-filter: blur(2px);-ms-filter: blur(2px);filter: blur(2px);}
+.effect-blur-2 {-webkit-filter: blur(4px);-moz-filter: blur(4px);-o-filter: blur(4px);-ms-filter: blur(4px);filter: blur(4px);}
+.effect-blur-3 {-webkit-filter: blur(6px);-moz-filter: blur(6px);-o-filter: blur(6px);-ms-filter: blur(6px);filter: blur(6px);}
+.effect-blur-4 {-webkit-filter: blur(12px);-moz-filter: blur(12px);-o-filter: blur(12px);-ms-filter: blur(12px);filter: blur(12px);}
+.effect-blur-no-border * {transform: scale(1.1);}
+.effect-blur-no-border {overflow: hidden;}
+.effect-blur-no-hover {transition: .2s;}
+.effect-blur-no-hover:hover {-webkit-filter: blur(0px);-moz-filter: blur(0px);-o-filter: blur(0px);-ms-filter: blur(0px);filter: blur(0px);}
+
+/* BLACK AND WHITE */
+.effect-bnw {-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
+.effect-bnw-hover {-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%);filter: gray;transition: 0.5s;}
+.effect-bnw-hover:hover {-webkit-filter: none;-moz-filter: none;-ms-filter: none;filter: none;filter: none;}
+
+/* BLACK AND WHITE AND BLUR */
+.effect-bnw.effect-blur-1 {-webkit-filter: blur(2px) grayscale(100%);-moz-filter: blur(2px) grayscale(100%);-o-filter: blur(2px) grayscale(100%);-ms-filter: blur(2px) grayscale(100%);filter: blur(2px) gray;}
+.effect-bnw.effect-blur-2 {-webkit-filter: blur(4px) grayscale(100%);-moz-filter: blur(4px) grayscale(100%);-o-filter: blur(4px) grayscale(100%);-ms-filter: blur(4px) grayscale(100%);filter: blur(4px) gray;}
+.effect-bnw.effect-blur-3 {-webkit-filter: blur(6px) grayscale(100%);-moz-filter: blur(6px) grayscale(100%);-o-filter: blur(6px) grayscale(100%);-ms-filter: blur(6px) grayscale(100%);filter: blur(6px) gray;}
+.effect-bnw.effect-blur-4 {-webkit-filter: blur(12px) grayscale(100%);-moz-filter: blur(12px) grayscale(100%);-o-filter: blur(12px) grayscale(100%);-ms-filter: blur(12px) grayscale(100%);filter: blur(12px) gray;}
+.effect-bnw-hover.effect-blur-1 {-webkit-filter: blur(2px) grayscale(100%);-moz-filter: blur(2px) grayscale(100%);-o-filter: blur(2px) grayscale(100%);-ms-filter: blur(2px) grayscale(100%);filter: blur(2px) gray;transition: 0.5s;}
+.effect-bnw-hover.effect-blur-2 {-webkit-filter: blur(4px) grayscale(100%);-moz-filter: blur(4px) grayscale(100%);-o-filter: blur(4px) grayscale(100%);-ms-filter: blur(4px) grayscale(100%);filter: blur(4px) gray;transition: 0.5s;}
+.effect-bnw-hover.effect-blur-3 {-webkit-filter: blur(6px) grayscale(100%);-moz-filter: blur(6px) grayscale(100%);-o-filter: blur(6px) grayscale(100%);-ms-filter: blur(6px) grayscale(100%);filter: blur(6px) gray;transition: 0.5s;}
+.effect-bnw-hover.effect-blur-4 {-webkit-filter: blur(12px) grayscale(100%);-moz-filter: blur(12px) grayscale(100%);-o-filter: blur(12px) grayscale(100%);-ms-filter: blur(12px) grayscale(100%);filter: blur(12px) gray;transition: 0.5s;}
+.effect-bnw-hover.effect-blur-1:hover {-webkit-filter: blur(2px) grayscale(0%);-moz-filter: blur(2px) grayscale(0%);-o-filter: blur(2px) grayscale(0%);-ms-filter: blur(2px) grayscale(0%);filter: blur(2px) rgba(0, 0, 0, 0);transition: 0.5s;}
+.effect-bnw-hover.effect-blur-2:hover {-webkit-filter: blur(4px) grayscale(0%);-moz-filter: blur(4px) grayscale(0%);-o-filter: blur(4px) grayscale(0%);-ms-filter: blur(4px) grayscale(0%);filter: blur(4px) rgba(0, 0, 0, 0);transition: 0.5s;}
+.effect-bnw-hover.effect-blur-3:hover {-webkit-filter: blur(6px) grayscale(0%);-moz-filter: blur(6px) grayscale(0%);-o-filter: blur(6px) grayscale(0%);-ms-filter: blur(6px) grayscale(0%);filter: blur(6px) rgba(0, 0, 0, 0);transition: 0.5s;}
+.effect-bnw-hover.effect-blur-4:hover {-webkit-filter: blur(12px) grayscale(0%);-moz-filter: blur(12px) grayscale(0%);-o-filter: blur(12px) grayscale(0%);-ms-filter: blur(12px) grayscale(0%);filter: blur(12px) rgba(0, 0, 0, 0);transition: 0.5s;}
+/* SHINE */
+.effect-shine {-webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);-webkit-mask-size: 200%;mask-size: 200%;animation: effect-shine 2s infinite ease;}
+@-webkit-keyframes effect-shine {from {-webkit-mask-position: 150%;}to {-webkit-mask-position: -50%;}}
+@keyframes effect-shine {from {-webkit-mask-position: 150%;}to {-webkit-mask-position: -50%;}}
+.effect-shine-hover:hover {-webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);-webkit-mask-size: 200%;mask-size: 200%;animation: effect-shine 2s infinite ease-out;}
+/* effect-pulse */
+.effect-pulse {animation: effect-pulse 0.9s infinite ease-out;transition: 1s;}
+@-webkit-keyframes effect-pulse {0% {transform: scale(1);opacity: 1;}50% {transform: scale(1.02);}70% {transform: scale(0.98);opacity: 0.9;}100% {transform: scale(1);}}
+@keyframes effect-pulse {0% {transform: scale(1);opacity: 1;}50% {transform: scale(1.02);}70% {transform: scale(0.98);opacity: 0.9;}100% {transform: scale(1);}}
+.effect-pulse:hover {animation: none;}
+.effect-pulse-hover {transition: 1s;}
+.effect-pulse-hover:hover {animation: effect-pulse 0.9s infinite ease-out;}
+/* effect-floating*/
+.effect-floating {animation: effect-floating 2.5s infinite ease-in-out;transition: 1s}
+@-webkit-keyframes effect-floating {from {transform: translate(0, 0px);}65% {transform: translate(0, 15px);}to {transform: translate(0, 0px);}}
+@keyframes effect-floating {from {transform: translate(0, 0px);}65% {transform: translate(0, 15px);}to {transform: translate(0, 0px);}}
+.effect-floating:hover {animation: none;}
+.effect-floating-hover {transition: 1s;}
+.effect-floating-hover:hover {animation: effect-floating 2.5s infinite ease-in-out;}
+/* effect-glow */
+/* Color guide (Bootstrap Default): 
+--primary: #007bff;
+--secondary: #6c757d;
+--success: #28a745;
+--info: #17a2b8;
+--warning: #ffc107;
+--danger: #dc3545; */
+
+.effect-glow-1 {text-shadow: 0px 0px 5px#fff;transition: .3s;}
+
+img.effect-glow-1, div.effect-glow-1, button.effect-glow-1, address.effect-glow-1, article.effect-glow-1, aside.effect-glow-1, details.effect-glow-1, dialog.effect-glow-1, fieldset.effect-glow-1, figure.effect-glow-1, footer.effect-glow-1, form.effect-glow-1, input.effect-glow-1, header.effect-glow-1, main.effect-glow-1, section.effect-glow-1, table.effect-glow-1, td.effect-glow-1, tr.effect-glow-1 {-webkit-box-shadow: 0px 0px 5px #fff;-moz-box-shadow: 0px 0px 5px #fff;box-shadow: 0px 0px 5px #fff;transition: .3s;}
+
+.effect-glow-1.effect-glow-primary {text-shadow: 0px 0px 5px#007bff;transition: .3s;}
+
+img.effect-glow-1.effect-glow-primary, div.effect-glow-1.effect-glow-primary, button.effect-glow-1.effect-glow-primary, address.effect-glow-1.effect-glow-primary, article.effect-glow-1.effect-glow-primary, aside.effect-glow-1.effect-glow-primary, details.effect-glow-1.effect-glow-primary, dialog.effect-glow-1.effect-glow-primary, fieldset.effect-glow-1.effect-glow-primary, figure.effect-glow-1.effect-glow-primary, footer.effect-glow-1.effect-glow-primary, form.effect-glow-1.effect-glow-primary, input.effect-glow-1.effect-glow-primary, header.effect-glow-1.effect-glow-primary, main.effect-glow-1.effect-glow-primary, section.effect-glow-1.effect-glow-primary, table.effect-glow-1.effect-glow-primary, td.effect-glow-1.effect-glow-primary, tr.effect-glow-1.effect-glow-primary {-webkit-box-shadow: 0px 0px 5px#007bff;-moz-box-shadow: 0px 0px 5px#007bff;box-shadow: 0px 0px 5px#007bff;transition: .3s;}
+
+.effect-glow-1.effect-glow-secondary {text-shadow: 0px 0px 5px#6c757d;transition: .3s;}
+
+img.effect-glow-1.effect-glow-secondary, div.effect-glow-1.effect-glow-secondary, button.effect-glow-1.effect-glow-secondary, address.effect-glow-1.effect-glow-secondary, article.effect-glow-1.effect-glow-secondary, aside.effect-glow-1.effect-glow-secondary, details.effect-glow-1.effect-glow-secondary, dialog.effect-glow-1.effect-glow-secondary, fieldset.effect-glow-1.effect-glow-secondary, figure.effect-glow-1.effect-glow-secondary, footer.effect-glow-1.effect-glow-secondary, form.effect-glow-1.effect-glow-secondary, input.effect-glow-1.effect-glow-secondary, header.effect-glow-1.effect-glow-secondary, main.effect-glow-1.effect-glow-secondary, section.effect-glow-1.effect-glow-secondary, table.effect-glow-1.effect-glow-secondary, td.effect-glow-1.effect-glow-secondary, tr.effect-glow-1.effect-glow-secondary {-webkit-box-shadow: 0px 0px 5px#6c757d;-moz-box-shadow: 0px 0px 5px#6c757d;box-shadow: 0px 0px 5px#6c757d;transition: .3s;}
+
+.effect-glow-1.effect-glow-success {text-shadow: 0px 0px 5px#28a745;transition: .3s;}
+
+img.effect-glow-1.effect-glow-success, div.effect-glow-1.effect-glow-success, button.effect-glow-1.effect-glow-success, address.effect-glow-1.effect-glow-success, article.effect-glow-1.effect-glow-success, aside.effect-glow-1.effect-glow-success, details.effect-glow-1.effect-glow-success, dialog.effect-glow-1.effect-glow-success, fieldset.effect-glow-1.effect-glow-success, figure.effect-glow-1.effect-glow-success, footer.effect-glow-1.effect-glow-success, form.effect-glow-1.effect-glow-success, input.effect-glow-1.effect-glow-success, header.effect-glow-1.effect-glow-success, main.effect-glow-1.effect-glow-success, section.effect-glow-1.effect-glow-success, table.effect-glow-1.effect-glow-success, td.effect-glow-1.effect-glow-success, tr.effect-glow-1.effect-glow-success {-webkit-box-shadow: 0px 0px 5px#28a745;-moz-box-shadow: 0px 0px 5px#28a745;box-shadow: 0px 0px 5px#28a745;transition: .3s;}
+
+.effect-glow-1.effect-glow-info {text-shadow: 0px 0px 5px#17a2b8;transition: .3s;}
+
+img.effect-glow-1.effect-glow-info, div.effect-glow-1.effect-glow-info, button.effect-glow-1.effect-glow-info, address.effect-glow-1.effect-glow-info, article.effect-glow-1.effect-glow-info, aside.effect-glow-1.effect-glow-info, details.effect-glow-1.effect-glow-info, dialog.effect-glow-1.effect-glow-info, fieldset.effect-glow-1.effect-glow-info, figure.effect-glow-1.effect-glow-info, footer.effect-glow-1.effect-glow-info, form.effect-glow-1.effect-glow-info, input.effect-glow-1.effect-glow-info, header.effect-glow-1.effect-glow-info, main.effect-glow-1.effect-glow-info, section.effect-glow-1.effect-glow-info, table.effect-glow-1.effect-glow-info, td.effect-glow-1.effect-glow-info, tr.effect-glow-1.effect-glow-info {-webkit-box-shadow: 0px 0px 5px#17a2b8;-moz-box-shadow: 0px 0px 5px#17a2b8;box-shadow: 0px 0px 5px#17a2b8;transition: .3s;}
+
+.effect-glow-1.effect-glow-warning {text-shadow: 0px 0px 5px#ffc107;transition: .3s;}
+
+img.effect-glow-1.effect-glow-warning, div.effect-glow-1.effect-glow-warning, button.effect-glow-1.effect-glow-warning, address.effect-glow-1.effect-glow-warning, article.effect-glow-1.effect-glow-warning, aside.effect-glow-1.effect-glow-warning, details.effect-glow-1.effect-glow-warning, dialog.effect-glow-1.effect-glow-warning, fieldset.effect-glow-1.effect-glow-warning, figure.effect-glow-1.effect-glow-warning, footer.effect-glow-1.effect-glow-warning, form.effect-glow-1.effect-glow-warning, input.effect-glow-1.effect-glow-warning, header.effect-glow-1.effect-glow-warning, main.effect-glow-1.effect-glow-warning, section.effect-glow-1.effect-glow-warning, table.effect-glow-1.effect-glow-warning, td.effect-glow-1.effect-glow-warning, tr.effect-glow-1.effect-glow-warning {-webkit-box-shadow: 0px 0px 5px#ffc107;-moz-box-shadow: 0px 0px 5px#ffc107;box-shadow: 0px 0px 5px#ffc107;transition: .3s;}
+
+.effect-glow-1.effect-glow-danger {text-shadow: 0px 0px 5px#dc3545;transition: .3s;}
+
+img.effect-glow-1.effect-glow-danger, div.effect-glow-1.effect-glow-danger, button.effect-glow-1.effect-glow-danger, address.effect-glow-1.effect-glow-danger, article.effect-glow-1.effect-glow-danger, aside.effect-glow-1.effect-glow-danger, details.effect-glow-1.effect-glow-danger, dialog.effect-glow-1.effect-glow-danger, fieldset.effect-glow-1.effect-glow-danger, figure.effect-glow-1.effect-glow-danger, footer.effect-glow-1.effect-glow-danger, form.effect-glow-1.effect-glow-danger, input.effect-glow-1.effect-glow-danger, header.effect-glow-1.effect-glow-danger, main.effect-glow-1.effect-glow-danger, section.effect-glow-1.effect-glow-danger, table.effect-glow-1.effect-glow-danger, td.effect-glow-1.effect-glow-danger, tr.effect-glow-1.effect-glow-danger {-webkit-box-shadow: 0px 0px 5px#dc3545;-moz-box-shadow: 0px 0px 5px#dc3545;box-shadow: 0px 0px 5px#dc3545;transition: .3s;}
+
+.effect-glow-2 {text-shadow: 0px 0px 20px#fff;transition: .3s;}
+
+img.effect-glow-2, div.effect-glow-2, button.effect-glow-2, address.effect-glow-2, article.effect-glow-2, aside.effect-glow-2, details.effect-glow-2, dialog.effect-glow-2, fieldset.effect-glow-2, figure.effect-glow-2, footer.effect-glow-2, form.effect-glow-2, input.effect-glow-2, header.effect-glow-2, main.effect-glow-2, section.effect-glow-2, table.effect-glow-2, td.effect-glow-2, tr.effect-glow-2 {-webkit-box-shadow: 0px 0px 20px #fff;-moz-box-shadow: 0px 0px 20px #fff;box-shadow: 0px 0px 20px #fff;transition: .3s;}
+
+.effect-glow-2.effect-glow-primary {text-shadow: 0px 0px 20px#007bff;transition: .3s;}
+
+img.effect-glow-2.effect-glow-primary, div.effect-glow-2.effect-glow-primary, button.effect-glow-2.effect-glow-primary, address.effect-glow-2.effect-glow-primary, article.effect-glow-2.effect-glow-primary, aside.effect-glow-2.effect-glow-primary, details.effect-glow-2.effect-glow-primary, dialog.effect-glow-2.effect-glow-primary, fieldset.effect-glow-2.effect-glow-primary, figure.effect-glow-2.effect-glow-primary, footer.effect-glow-2.effect-glow-primary, form.effect-glow-2.effect-glow-primary, input.effect-glow-2.effect-glow-primary, header.effect-glow-2.effect-glow-primary, main.effect-glow-2.effect-glow-primary, section.effect-glow-2.effect-glow-primary, table.effect-glow-2.effect-glow-primary, td.effect-glow-2.effect-glow-primary, tr.effect-glow-2.effect-glow-primary {-webkit-box-shadow: 0px 0px 20px#007bff;-moz-box-shadow: 0px 0px 20px#007bff;box-shadow: 0px 0px 20px#007bff;transition: .3s;}
+
+.effect-glow-2.effect-glow-secondary {text-shadow: 0px 0px 20px#6c757d;transition: .3s;}
+
+img.effect-glow-2.effect-glow-secondary, div.effect-glow-2.effect-glow-secondary, button.effect-glow-2.effect-glow-secondary, address.effect-glow-2.effect-glow-secondary, article.effect-glow-2.effect-glow-secondary, aside.effect-glow-2.effect-glow-secondary, details.effect-glow-2.effect-glow-secondary, dialog.effect-glow-2.effect-glow-secondary, fieldset.effect-glow-2.effect-glow-secondary, figure.effect-glow-2.effect-glow-secondary, footer.effect-glow-2.effect-glow-secondary, form.effect-glow-2.effect-glow-secondary, input.effect-glow-2.effect-glow-secondary, header.effect-glow-2.effect-glow-secondary, main.effect-glow-2.effect-glow-secondary, section.effect-glow-2.effect-glow-secondary, table.effect-glow-2.effect-glow-secondary, td.effect-glow-2.effect-glow-secondary, tr.effect-glow-2.effect-glow-secondary {-webkit-box-shadow: 0px 0px 20px#6c757d;-moz-box-shadow: 0px 0px 20px#6c757d;box-shadow: 0px 0px 20px#6c757d;transition: .3s;}
+
+.effect-glow-2.effect-glow-success {text-shadow: 0px 0px 20px#28a745;transition: .3s;}
+
+img.effect-glow-2.effect-glow-success, div.effect-glow-2.effect-glow-success, button.effect-glow-2.effect-glow-success, address.effect-glow-2.effect-glow-success, article.effect-glow-2.effect-glow-success, aside.effect-glow-2.effect-glow-success, details.effect-glow-2.effect-glow-success, dialog.effect-glow-2.effect-glow-success, fieldset.effect-glow-2.effect-glow-success, figure.effect-glow-2.effect-glow-success, footer.effect-glow-2.effect-glow-success, form.effect-glow-2.effect-glow-success, input.effect-glow-2.effect-glow-success, header.effect-glow-2.effect-glow-success, main.effect-glow-2.effect-glow-success, section.effect-glow-2.effect-glow-success, table.effect-glow-2.effect-glow-success, td.effect-glow-2.effect-glow-success, tr.effect-glow-2.effect-glow-success {-webkit-box-shadow: 0px 0px 20px#28a745;-moz-box-shadow: 0px 0px 20px#28a745;box-shadow: 0px 0px 20px#28a745;transition: .3s;}
+
+.effect-glow-2.effect-glow-info {text-shadow: 0px 0px 20px#17a2b8;transition: .3s;}
+
+img.effect-glow-2.effect-glow-info, div.effect-glow-2.effect-glow-info, button.effect-glow-2.effect-glow-info, address.effect-glow-2.effect-glow-info, article.effect-glow-2.effect-glow-info, aside.effect-glow-2.effect-glow-info, details.effect-glow-2.effect-glow-info, dialog.effect-glow-2.effect-glow-info, fieldset.effect-glow-2.effect-glow-info, figure.effect-glow-2.effect-glow-info, footer.effect-glow-2.effect-glow-info, form.effect-glow-2.effect-glow-info, input.effect-glow-2.effect-glow-info, header.effect-glow-2.effect-glow-info, main.effect-glow-2.effect-glow-info, section.effect-glow-2.effect-glow-info, table.effect-glow-2.effect-glow-info, td.effect-glow-2.effect-glow-info, tr.effect-glow-2.effect-glow-info {-webkit-box-shadow: 0px 0px 20px#17a2b8;-moz-box-shadow: 0px 0px 20px#17a2b8;box-shadow: 0px 0px 20px#17a2b8;transition: .3s;}
+
+.effect-glow-2.effect-glow-warning {text-shadow: 0px 0px 20px#ffc107;transition: .3s;}
+
+img.effect-glow-2.effect-glow-warning, div.effect-glow-2.effect-glow-warning, button.effect-glow-2.effect-glow-warning, address.effect-glow-2.effect-glow-warning, article.effect-glow-2.effect-glow-warning, aside.effect-glow-2.effect-glow-warning, details.effect-glow-2.effect-glow-warning, dialog.effect-glow-2.effect-glow-warning, fieldset.effect-glow-2.effect-glow-warning, figure.effect-glow-2.effect-glow-warning, footer.effect-glow-2.effect-glow-warning, form.effect-glow-2.effect-glow-warning, input.effect-glow-2.effect-glow-warning, header.effect-glow-2.effect-glow-warning, main.effect-glow-2.effect-glow-warning, section.effect-glow-2.effect-glow-warning, table.effect-glow-2.effect-glow-warning, td.effect-glow-2.effect-glow-warning, tr.effect-glow-2.effect-glow-warning {-webkit-box-shadow: 0px 0px 20px#ffc107;-moz-box-shadow: 0px 0px 20px#ffc107;box-shadow: 0px 0px 20px#ffc107;transition: .3s;}
+
+.effect-glow-2.effect-glow-danger {text-shadow: 0px 0px 20px#dc3545;transition: .3s;}
+
+img.effect-glow-2.effect-glow-danger, div.effect-glow-2.effect-glow-danger, button.effect-glow-2.effect-glow-danger, address.effect-glow-2.effect-glow-danger, article.effect-glow-2.effect-glow-danger, aside.effect-glow-2.effect-glow-danger, details.effect-glow-2.effect-glow-danger, dialog.effect-glow-2.effect-glow-danger, fieldset.effect-glow-2.effect-glow-danger, figure.effect-glow-2.effect-glow-danger, footer.effect-glow-2.effect-glow-danger, form.effect-glow-2.effect-glow-danger, input.effect-glow-2.effect-glow-danger, header.effect-glow-2.effect-glow-danger, main.effect-glow-2.effect-glow-danger, section.effect-glow-2.effect-glow-danger, table.effect-glow-2.effect-glow-danger, td.effect-glow-2.effect-glow-danger, tr.effect-glow-2.effect-glow-danger {-webkit-box-shadow: 0px 0px 20px#dc3545;-moz-box-shadow: 0px 0px 20px#dc3545;box-shadow: 0px 0px 20px#dc3545;transition: .3s;}
+
+.effect-glow-hover {-webkit-box-shadow: none !important;-moz-box-shadow: none !important;box-shadow: none !important;text-shadow: none !important;}
+
+.effect-glow-1.effect-glow-hover:hover {text-shadow: 0px 0px 5px#fff !important;transition: .3s;}
+
+img.effect-glow-1.effect-glow-hover:hover, div.effect-glow-1.effect-glow-hover:hover, button.effect-glow-1.effect-glow-hover:hover, address.effect-glow-1.effect-glow-hover:hover, article.effect-glow-1.effect-glow-hover:hover, aside.effect-glow-1.effect-glow-hover:hover, details.effect-glow-1.effect-glow-hover:hover, dialog.effect-glow-1.effect-glow-hover:hover, fieldset.effect-glow-1.effect-glow-hover:hover, figure.effect-glow-1.effect-glow-hover:hover, footer.effect-glow-1.effect-glow-hover:hover, form.effect-glow-1.effect-glow-hover:hover, input.effect-glow-1.effect-glow-hover:hover, header.effect-glow-1.effect-glow-hover:hover, main.effect-glow-1.effect-glow-hover:hover, section.effect-glow-1.effect-glow-hover:hover, table.effect-glow-1.effect-glow-hover:hover, td.effect-glow-1.effect-glow-hover:hover, tr.effect-glow-1.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 5px #fff !important;-moz-box-shadow: 0px 0px 5px #fff !important;box-shadow: 0px 0px 5px #fff !important;transition: .3s;}
+
+.effect-glow-1.effect-glow-primary.effect-glow-hover:hover {text-shadow: 0px 0px 5px#007bff !important;transition: .3s;}
+
+img.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, div.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, button.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, address.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, article.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, aside.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, details.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, dialog.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, fieldset.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, figure.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, footer.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, form.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, input.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, header.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, main.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, section.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, table.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, td.effect-glow-1.effect-glow-primary.effect-glow-hover:hover, tr.effect-glow-1.effect-glow-primary.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 5px#007bff !important;-moz-box-shadow: 0px 0px 5px#007bff !important; box-shadow: 0px 0px 5px#007bff !important;transition: .3s;}
+
+.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover {text-shadow: 0px 0px 5px#6c757d !important;transition: .3s;}
+
+img.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, div.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, button.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, address.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, article.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, aside.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, details.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, dialog.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, fieldset.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, figure.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, footer.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, form.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, input.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, header.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, main.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, section.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, table.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, td.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover, tr.effect-glow-1.effect-glow-secondary.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 5px#6c757d !important;-moz-box-shadow: 0px 0px 5px#6c757d !important;box-shadow: 0px 0px 5px#6c757d !important;transition: .3s;}
+
+.effect-glow-1.effect-glow-success.effect-glow-hover:hover {text-shadow: 0px 0px 5px#28a745 !important;transition: .3s;}
+
+img.effect-glow-1.effect-glow-success.effect-glow-hover:hover, div.effect-glow-1.effect-glow-success.effect-glow-hover:hover, button.effect-glow-1.effect-glow-success.effect-glow-hover:hover, address.effect-glow-1.effect-glow-success.effect-glow-hover:hover, article.effect-glow-1.effect-glow-success.effect-glow-hover:hover, aside.effect-glow-1.effect-glow-success.effect-glow-hover:hover, details.effect-glow-1.effect-glow-success.effect-glow-hover:hover, dialog.effect-glow-1.effect-glow-success.effect-glow-hover:hover, fieldset.effect-glow-1.effect-glow-success.effect-glow-hover:hover, figure.effect-glow-1.effect-glow-success.effect-glow-hover:hover, footer.effect-glow-1.effect-glow-success.effect-glow-hover:hover, form.effect-glow-1.effect-glow-success.effect-glow-hover:hover, input.effect-glow-1.effect-glow-success.effect-glow-hover:hover, header.effect-glow-1.effect-glow-success.effect-glow-hover:hover, main.effect-glow-1.effect-glow-success.effect-glow-hover:hover, section.effect-glow-1.effect-glow-success.effect-glow-hover:hover, table.effect-glow-1.effect-glow-success.effect-glow-hover:hover, td.effect-glow-1.effect-glow-success.effect-glow-hover:hover, tr.effect-glow-1.effect-glow-success.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 5px#28a745 !important;-moz-box-shadow: 0px 0px 5px#28a745 !important;box-shadow: 0px 0px 5px#28a745 !important;transition: .3s;}
+
+.effect-glow-1.effect-glow-info.effect-glow-hover:hover {text-shadow: 0px 0px 5px#17a2b8 !important;transition: .3s;}
+
+img.effect-glow-1.effect-glow-info.effect-glow-hover:hover, div.effect-glow-1.effect-glow-info.effect-glow-hover:hover, button.effect-glow-1.effect-glow-info.effect-glow-hover:hover, address.effect-glow-1.effect-glow-info.effect-glow-hover:hover, article.effect-glow-1.effect-glow-info.effect-glow-hover:hover, aside.effect-glow-1.effect-glow-info.effect-glow-hover:hover, details.effect-glow-1.effect-glow-info.effect-glow-hover:hover, dialog.effect-glow-1.effect-glow-info.effect-glow-hover:hover, fieldset.effect-glow-1.effect-glow-info.effect-glow-hover:hover, figure.effect-glow-1.effect-glow-info.effect-glow-hover:hover, footer.effect-glow-1.effect-glow-info.effect-glow-hover:hover, form.effect-glow-1.effect-glow-info.effect-glow-hover:hover, input.effect-glow-1.effect-glow-info.effect-glow-hover:hover, header.effect-glow-1.effect-glow-info.effect-glow-hover:hover, main.effect-glow-1.effect-glow-info.effect-glow-hover:hover, section.effect-glow-1.effect-glow-info.effect-glow-hover:hover, table.effect-glow-1.effect-glow-info.effect-glow-hover:hover, td.effect-glow-1.effect-glow-info.effect-glow-hover:hover, tr.effect-glow-1.effect-glow-info.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 5px#17a2b8 !important;-moz-box-shadow: 0px 0px 5px#17a2b8 !important;box-shadow: 0px 0px 5px#17a2b8 !important;transition: .3s;}
+
+.effect-glow-1.effect-glow-warning.effect-glow-hover:hover {text-shadow: 0px 0px 5px#ffc107 !important;transition: .3s;}
+
+img.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, div.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, button.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, address.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, article.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, aside.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, details.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, dialog.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, fieldset.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, figure.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, footer.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, form.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, input.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, header.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, main.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, section.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, table.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, td.effect-glow-1.effect-glow-warning.effect-glow-hover:hover, tr.effect-glow-1.effect-glow-warning.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 5px#ffc107 !important;-moz-box-shadow: 0px 0px 5px#ffc107 !important;box-shadow: 0px 0px 5px#ffc107 !important;transition: .3s;}
+
+.effect-glow-1.effect-glow-danger.effect-glow-hover:hover {text-shadow: 0px 0px 5px#dc3545 !important;transition: .3s;}
+
+img.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, div.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, button.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, address.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, article.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, aside.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, details.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, dialog.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, fieldset.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, figure.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, footer.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, form.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, input.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, header.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, main.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, section.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, table.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, td.effect-glow-1.effect-glow-danger.effect-glow-hover:hover, tr.effect-glow-1.effect-glow-danger.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 5px#dc3545 !important;-moz-box-shadow: 0px 0px 5px#dc3545 !important;box-shadow: 0px 0px 5px#dc3545 !important;transition: .3s;}
+
+.effect-glow-2.effect-glow-hover:hover {text-shadow: 0px 0px 20px#fff !important;transition: .3s;}
+
+img.effect-glow-2.effect-glow-hover:hover, div.effect-glow-2.effect-glow-hover:hover, button.effect-glow-2.effect-glow-hover:hover, address.effect-glow-2.effect-glow-hover:hover, article.effect-glow-2.effect-glow-hover:hover, aside.effect-glow-2.effect-glow-hover:hover, details.effect-glow-2.effect-glow-hover:hover, dialog.effect-glow-2.effect-glow-hover:hover, fieldset.effect-glow-2.effect-glow-hover:hover, figure.effect-glow-2.effect-glow-hover:hover, footer.effect-glow-2.effect-glow-hover:hover, form.effect-glow-2.effect-glow-hover:hover, input.effect-glow-2.effect-glow-hover:hover, header.effect-glow-2.effect-glow-hover:hover, main.effect-glow-2.effect-glow-hover:hover, section.effect-glow-2.effect-glow-hover:hover, table.effect-glow-2.effect-glow-hover:hover, td.effect-glow-2.effect-glow-hover:hover, tr.effect-glow-2.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 20px #fff !important;-moz-box-shadow: 0px 0px 20px #fff !important;box-shadow: 0px 0px 20px #fff !important;transition: .3s;}
+
+.effect-glow-2.effect-glow-primary.effect-glow-hover:hover {text-shadow: 0px 0px 20px#007bff !important;transition: .3s;}
+
+img.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, div.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, button.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, address.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, article.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, aside.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, details.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, dialog.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, fieldset.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, figure.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, footer.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, form.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, input.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, header.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, main.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, section.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, table.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, td.effect-glow-2.effect-glow-primary.effect-glow-hover:hover, tr.effect-glow-2.effect-glow-primary.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 20px#007bff !important;-moz-box-shadow: 0px 0px 20px#007bff !important;box-shadow: 0px 0px 20px#007bff !important;transition: .3s;}
+
+.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover {text-shadow: 0px 0px 20px#6c757d !important;transition: .3s;}
+
+img.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, div.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, button.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, address.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, article.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, aside.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, details.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, dialog.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, fieldset.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, figure.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, footer.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, form.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, input.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, header.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, main.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, section.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, table.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, td.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover, tr.effect-glow-2.effect-glow-secondary.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 20px#6c757d !important;-moz-box-shadow: 0px 0px 20px#6c757d !important;box-shadow: 0px 0px 20px#6c757d !important;transition: .3s;}
+
+.effect-glow-2.effect-glow-success.effect-glow-hover:hover {text-shadow: 0px 0px 20px#28a745 !important;transition: .3s;}
+
+img.effect-glow-2.effect-glow-success.effect-glow-hover:hover, div.effect-glow-2.effect-glow-success.effect-glow-hover:hover, button.effect-glow-2.effect-glow-success.effect-glow-hover:hover, address.effect-glow-2.effect-glow-success.effect-glow-hover:hover, article.effect-glow-2.effect-glow-success.effect-glow-hover:hover, aside.effect-glow-2.effect-glow-success.effect-glow-hover:hover, details.effect-glow-2.effect-glow-success.effect-glow-hover:hover, dialog.effect-glow-2.effect-glow-success.effect-glow-hover:hover, fieldset.effect-glow-2.effect-glow-success.effect-glow-hover:hover, figure.effect-glow-2.effect-glow-success.effect-glow-hover:hover, footer.effect-glow-2.effect-glow-success.effect-glow-hover:hover, form.effect-glow-2.effect-glow-success.effect-glow-hover:hover, input.effect-glow-2.effect-glow-success.effect-glow-hover:hover, header.effect-glow-2.effect-glow-success.effect-glow-hover:hover, main.effect-glow-2.effect-glow-success.effect-glow-hover:hover, section.effect-glow-2.effect-glow-success.effect-glow-hover:hover, table.effect-glow-2.effect-glow-success.effect-glow-hover:hover, td.effect-glow-2.effect-glow-success.effect-glow-hover:hover, tr.effect-glow-2.effect-glow-success.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 20px#28a745 !important;-moz-box-shadow: 0px 0px 20px#28a745 !important;box-shadow: 0px 0px 20px#28a745 !important;transition: .3s;}
+
+.effect-glow-2.effect-glow-info.effect-glow-hover:hover {text-shadow: 0px 0px 20px#17a2b8 !important;transition: .3s;}
+
+img.effect-glow-2.effect-glow-info.effect-glow-hover:hover, div.effect-glow-2.effect-glow-info.effect-glow-hover:hover, button.effect-glow-2.effect-glow-info.effect-glow-hover:hover, address.effect-glow-2.effect-glow-info.effect-glow-hover:hover, article.effect-glow-2.effect-glow-info.effect-glow-hover:hover, aside.effect-glow-2.effect-glow-info.effect-glow-hover:hover, details.effect-glow-2.effect-glow-info.effect-glow-hover:hover, dialog.effect-glow-2.effect-glow-info.effect-glow-hover:hover, fieldset.effect-glow-2.effect-glow-info.effect-glow-hover:hover, figure.effect-glow-2.effect-glow-info.effect-glow-hover:hover, footer.effect-glow-2.effect-glow-info.effect-glow-hover:hover, form.effect-glow-2.effect-glow-info.effect-glow-hover:hover, input.effect-glow-2.effect-glow-info.effect-glow-hover:hover, header.effect-glow-2.effect-glow-info.effect-glow-hover:hover, main.effect-glow-2.effect-glow-info.effect-glow-hover:hover, section.effect-glow-2.effect-glow-info.effect-glow-hover:hover, table.effect-glow-2.effect-glow-info.effect-glow-hover:hover, td.effect-glow-2.effect-glow-info.effect-glow-hover:hover, tr.effect-glow-2.effect-glow-info.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 20px#17a2b8 !important;-moz-box-shadow: 0px 0px 20px#17a2b8 !important;box-shadow: 0px 0px 20px#17a2b8 !important;transition: .3s;}
+
+.effect-glow-2.effect-glow-warning.effect-glow-hover:hover {text-shadow: 0px 0px 20px#ffc107 !important;transition: .3s;}
+
+img.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, div.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, button.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, address.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, article.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, aside.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, details.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, dialog.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, fieldset.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, figure.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, footer.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, form.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, input.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, header.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, main.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, section.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, table.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, td.effect-glow-2.effect-glow-warning.effect-glow-hover:hover, tr.effect-glow-2.effect-glow-warning.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 20px#ffc107 !important;-moz-box-shadow: 0px 0px 20px#ffc107 !important;box-shadow: 0px 0px 20px#ffc107 !important;transition: .3s;}
+
+.effect-glow-2.effect-glow-danger.effect-glow-hover:hover {text-shadow: 0px 0px 20px#dc3545 !important;transition: .3s;}
+
+img.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, div.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, button.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, address.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, article.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, aside.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, details.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, dialog.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, fieldset.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, figure.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, footer.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, form.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, input.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, header.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, main.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, section.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, table.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, td.effect-glow-2.effect-glow-danger.effect-glow-hover:hover, tr.effect-glow-2.effect-glow-danger.effect-glow-hover:hover {-webkit-box-shadow: 0px 0px 20px#dc3545 !important;-moz-box-shadow: 0px 0px 20px#dc3545 !important;box-shadow: 0px 0px 20px#dc3545 !important;transition: .3s;}
+
+.effect-glow-1::-webkit-input-placeholder {text-shadow: none;}
+.effect-glow-2::-webkit-input-placeholder {text-shadow: none;}
+.effect-glow-no-hover:hover {-webkit-box-shadow: none !important;-moz-box-shadow: none !important;box-shadow: none !important;text-shadow: none !important;}
